@@ -1,0 +1,13 @@
+Запустить flask shell
+
+
+
+from flask_mail import Message
+from hello import app, mail
+msg=Message('test',sender='robotstatmail@gmail.com',recipients='robotstatmail@gmail.com'])
+msg.body='This is text body'
+msg.html='This is <b>HTML</b> body'
+with app.app.context():
+    mail.send(msg)
+
+

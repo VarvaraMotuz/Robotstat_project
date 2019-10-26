@@ -1,0 +1,15 @@
+Установка окружения. 
+Нужно открыть CMD, перейти в папку E:\Python\Flask-Bootcamp-master\Flask-Bootcamp-master
+и запустить команду: 
+conda create -n mynewflaskenv python=3.7
+Затем активировать окружение:
+conda activate mynewflaskenv
+
+Список всех окружений
+conda env list
+
+Затем установить все библиотеки из файла requirements.txt
+pip install -r reqirements.txt
+
+Сохранить все библиотеки в файл
+pip freeze > requirements.txt

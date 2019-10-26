@@ -1,0 +1,26 @@
+1. Установка Python 3.7 - python-3.7.4.exe
+2. Установка Anaconda -  Anaconda3-2019.07-Windows-x86_64
+3. Установка Atom - AtomSetup-x64
+4. Установка Бобра - dbeaver-ce-6.2.2-x86_64-setup
+5. Создать виртуальное окружение через 
+   conda create -n tetsenv python=3.7 
+6. Ативировать виртуальное окружение
+	conda activate testenv
+7. Git HUB: 
+   a. Создать аккаунт на Git hub
+   b. Установка git bush - Git-2.22.0-64-bit
+   c. Команды работы с Git в файле Команды Git.txt
+
+8. Работа с проектом:
+	a. Создать каталог с файлами проекта
+	b. Заходишь в Atom и добавляешь папку проекта
+	с. Активировать виртуальное окружение 
+		conda activate testenv
+	d. Установка в свое виртуальное окружение библиотек из requirements.txt
+		pip install -r requirements.txt
+	e. Установить переменную окружения 
+		set FLASK_APP=robotstat.py
+	g. Запуск приложения 
+		python robotstat.py
+	h. Открываешь браузер по адресу http://127.0.0.1:5000
+	

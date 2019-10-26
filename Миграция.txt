@@ -1,0 +1,34 @@
+Окружение
+robotstatenv
+Приложение heroku
+https://ikt-app.herokuapp.com
+git репозитарий heroku
+https://git.heroku.com/ikt-app.git
+
+Миграция БД
+В консоли Атома:
+Задать окружение robotstatenv
+conda activate robotstatenv
+Перейти в каталог приложения
+cd E:\Python\Robot_statistics
+1. set FLASK_APP=app.py
+
+2. flask db init (запускается только при инициализации БД)
+
+3. flask db migrate -m "created puppy table"
+Создается скрипт вида 
+E:\Python\Robot_statistics\migrations\versions\d5abb7f1fedd_created_table_patients.py
+
+Его можно поправить вручную
+
+4. flask db upgrade
+Запускается указанный выше скрипт
+
+Чтобы проверить данные в БД можно:
+1. Запусить оболочку 
+flask shell
+2. Забрать таблицу
+from app import Patients
+3. Вывести все записи
+Patients.query.all()
+

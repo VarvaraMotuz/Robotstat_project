@@ -1,0 +1,8 @@
+1. pip install rq
+2. Установить https://github.com/MicrosoftArchive/redis/releases
+При установке: номер порта - 6379
+3. Запустить C:\Program Files\Redis\redis-server.exe
+4. Создать процесс в cmd : rq worker robotstat-tasks
+5. Открыть еще одно окно терминала и выполнить в python:
+
+

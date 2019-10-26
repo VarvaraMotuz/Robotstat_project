@@ -1,0 +1,45 @@
+1. Запустить flask shell
+В модуле основного flsk приложения должна быть функция оболочки
+@app.shell_context_processor
+def make_shell_context():
+    return dict(db=db, Robots=Robots, Clinics=Clinics, Patients=Patients)
+
+Она инициализирует объекты БД
+
+
+2. Добавить запись в таблицу
+c = Clinics(ClinicDescription='K1')
+db.session.add(c)
+cb.session.commit()
+
+c = Clinics(ClinicDescription='K2')
+db.session.add(c)
+cb.session.commit()
+
+3. Вывести все клиники
+
+clinics = Clinics.query.all()
+for c in clinics:
+    print(c)
+
+4. Вывести первую клинику
+
+c1 = Clinics.query.get(1)
+print(c1)
+
+5. Добавить запись в таблицу робот с привязкой к записи в таблице клиники
+с1 = Clinics.query.get(1)
+r = Robots(RobotDescription='Robot1', clinics=c1)
+
+6. Удалить записи из таблицы 
+robots = Robots.query.all()
+for r in robots:
+    db.session.delete(r)
+
+db.session.commit()
+
+
+
+
+
+
